@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
-  name         = "${var.name_instance}"
-  machine_type = "n1-standard-1"
-  zone         = "us-central1-a"
+  name         = var.name_instance
+  machine_type = var.type_machine 
+  zone         = var.zone
 
   tags = ["foo", "bar"]
 
